@@ -12,3 +12,4 @@ id_rsa.pub
 config.js
 *.pem
 data/docker-containers-volumes
+/node_modules
