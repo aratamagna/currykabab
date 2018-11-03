@@ -2,17 +2,6 @@ var express = require('express');
 var cors = require('cors')
 var app = express();
 var bodyParser = require('body-parser');
-var mongoose = require('mongoose');
-
-//connect to MongoDB
-mongoose.connect('mongodb://tatsuya:miyuki@18.222.67.253/sirisone');
-var db = mongoose.connection;
-
-//handle mongo error
-db.on('error', console.error.bind(console, 'connection error:'));
-db.once('open', function () {
-  // we're connected!
-});
 
 // parse incoming requests
 app.use(bodyParser.json());
@@ -39,6 +28,6 @@ app.use(function (err, req, res, next) {
 });
 
 // listen on port 3000
-app.listen(3000, function () {
+app.listen(3002, function () {
   console.log('Express app listening on port 3000');
 });
