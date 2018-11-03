@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 
-var pubdir = './storage/public/';
+var pubdir = './storage/';
 
 router.get('/', function (req, res, next) {
   res.sendfile(pubdir+'index.html');
